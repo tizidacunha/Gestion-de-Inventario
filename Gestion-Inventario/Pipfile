@@ -1,0 +1,15 @@
+[[source]]
+url = "https://nexus.cloudint.afip.gob.ar/nexus/repository/pypi-proxy/simple"
+verify_ssl = false
+name = "pip_conf_index_global"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+sqlalchemy = "*"
+cx-oracle = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
