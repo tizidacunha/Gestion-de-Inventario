@@ -10,7 +10,7 @@
         "sources": [
             {
                 "name": "pip_conf_index_global",
-                "url": "https://nexus.cloudint.afip.gob.ar/nexus/repository/pypi-proxy/simple",
+                "url": "",
                 "verify_ssl": false
             }
         ]
