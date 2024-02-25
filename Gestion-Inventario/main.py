@@ -5,7 +5,7 @@ from models import Inventario
 app = FastAPI()
 
 cx_Oracle.init_oracle_client(lib_dir=r"C:\instantclient_19_20")
-conn = cx_Oracle.connect('rosi_efis/rosi_efis@10.30.205.127:1521/fisco')
+conn = cx_Oracle.connect('.')
 
 @app.post("/agregar_producto")
 def agregar_producto(dato: Inventario):
@@ -55,7 +55,7 @@ def obtener_inventario():
 @app.delete("/delete")
 def delete_dato(id: int):
     try:
-        con = cx_Oracle.connect('rosi_efis/rosi_efis@10.30.205.127:1521/fisco')
+        con = cx_Oracle.connect('.')
         cur = con.cursor()
         cur.execute('DELETE FROM inventario WHERE id = :id', {'id': id})
         con.commit()
